@@ -6,7 +6,7 @@ RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s
     mv ./kubectl /usr/local/bin/kubectl
 
 # Install chectl
-RUN echo "invalidating quay.io cache 20210215 7.26.0"
+RUN echo "invalidating quay.io cache 20210308 7.27.0"
 RUN curl -sL  https://www.eclipse.org/che/chectl/ | bash
 
 # Set permissions on /etc/passwd and /home to allow arbitrary users to write
