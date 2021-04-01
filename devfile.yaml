@@ -18,7 +18,7 @@ components:
   - mountSources: true
     memoryLimit: 512Mi
     type: dockerimage
-    image: 'quay.io/sunix/google-cloud-sdk:latest'
+    image: 'quay.io/sunix/chectl:latest'
     alias: chectl
     env:
       - value: /bin/bash
