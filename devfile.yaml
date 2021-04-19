@@ -3,10 +3,6 @@ metadata:
   generateName: che-in-gcloud-
 components:
   - mountSources: true
-    command:
-      - tail
-      - '-f'
-      - /dev/null
     memoryLimit: 512M
     type: dockerimage
     image: quay.io/sunix/google-cloud-sdk:latest
