@@ -14,6 +14,7 @@ RUN mkdir -p /home/user && chgrp -R 0 /home && chmod -R g=u /etc/passwd /etc/gro
 
 # Install common terminal editors in container to aid development process
 COPY install-editor-tooling.sh /tmp
+RUN cd /etc/yum.repos.d/ && sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-* && sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
 RUN /tmp/install-editor-tooling.sh && rm -f /tmp/install-editor-tooling.sh
 
 USER 10001
